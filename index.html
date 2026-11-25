@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A.D. Escu – Seria Dex Varney | Noir cu umor negru</title>
+<meta name="description" content="A.D. Escu, autorul seriei Dex Varney: thrillere noir cu umor negru pe Coasta Golfului. Play Me Out Thursday și Whistle Me Down Saturday pe Amazon; edițiile în română pe Google Play.">
+<meta property="og:title" content="A.D. Escu – Seria Dex Varney">
+<meta property="og:description" content="Cinci mii de dolari ca să cânte la o înmormântare. Numai că mortul n-a fost încă livrat.">
+<meta property="og:image" content="img/play-me-out-thursday.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #121A20;
+    --bg-2: #1A242C;
+    --text: #EFE6D4;
+    --muted: #C9BFAE;
+    --gold: #D4AF5A;
+    --gold-dark: #B8943F;
+    --ink: #121A20;
+    --page: 1180px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 400 1.0625rem/1.65 "Lora", Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; }
+  .wrap { width: 100%; max-width: var(--page); margin: 0 auto; padding: 0 1.25rem; }
+  @media (min-width: 768px) { .wrap { padding: 0 2.5rem; } }
+
+  h1, h2, h3, .overline, .btn, .brand {
+    font-family: "Oswald", "Arial Narrow", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  h1, h2, h3 { margin: 0; line-height: 1.05; letter-spacing: 0.01em; }
+  h1 { font-size: clamp(2.6rem, 7vw, 5rem); }
+  h2 { font-size: clamp(2rem, 4.5vw, 3rem); }
+  h3 { font-size: 1.6rem; }
+  p { margin: 0; }
+  .overline { color: var(--gold); font-size: 0.8rem; letter-spacing: 0.3em; }
+  .muted { color: var(--muted); }
+  .italic { font-style: italic; }
+  .gold { color: var(--gold); }
+
+  /* Header */
+  header { border-bottom: 1px solid rgba(212,175,90,0.15); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; min-height: 64px; gap: 1rem; }
+  .brand { font-size: 1.25rem; letter-spacing: 0.15em; text-decoration: none; }
+  nav { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+  nav a { font-size: 0.95rem; text-decoration: none; color: var(--muted); }
+  nav a:hover, nav a:focus-visible { color: var(--gold); }
+  @media (max-width: 560px) { nav { display: none; } }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 48px; padding: 0 1.5rem;
+    font-size: 0.95rem; letter-spacing: 0.12em; text-decoration: none;
+    border: 1px solid var(--gold);
+    transition: background-color .2s, color .2s, transform .1s;
+  }
+  .btn:active { transform: scale(0.97); }
+  .btn-primary { background: var(--gold); color: var(--ink); }
+  .btn-primary:hover, .btn-primary:focus-visible { background: var(--gold-dark); border-color: var(--gold-dark); }
+  .btn-outline { background: transparent; color: var(--gold); }
+  .btn-outline:hover, .btn-outline:focus-visible { background: rgba(212,175,90,0.12); }
+  .btn-soon { background: transparent; color: var(--muted); border-color: rgba(201,191,174,0.4); cursor: default; }
+  .btn:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
+
+  /* Sections */
+  section { padding: 5rem 0; }
+  .alt { background: var(--bg-2); }
+  .stack > * + * { margin-top: 1.25rem; }
+  .intro { max-width: 42rem; }
+
+  /* Hero */
+  .hero { padding: 4rem 0 5rem; }
+  .hero .wrap { display: grid; gap: 3rem; align-items: center; }
+  @media (min-width: 960px) { .hero .wrap { grid-template-columns: 1.2fr 1fr; } }
+  .hero .tagline { font-size: 1.25rem; font-style: italic; max-width: 34rem; }
+  .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; padding-top: 0.5rem; }
+  .hero-cover { width: 100%; max-width: 380px; margin: 0 auto; box-shadow: 0 30px 60px rgba(0,0,0,0.55); }
+
+  /* Books */
+  .books { display: grid; gap: 3.5rem; margin-top: 3rem; }
+  @media (min-width: 860px) { .books { grid-template-columns: 1fr 1fr; } }
+  .book { display: grid; gap: 1.5rem; align-items: start; }
+  @media (min-width: 520px) { .book { grid-template-columns: 180px 1fr; } }
+  .book img, .cover-missing { width: 180px; box-shadow: 0 18px 40px rgba(0,0,0,0.5); }
+  .cover-missing { aspect-ratio: 5 / 8; background: var(--bg-2); border: 1px solid rgba(212,175,90,0.3); }
+  .book .stack > * + * { margin-top: 0.75rem; }
+  .book .formats { font-size: 0.95rem; }
+  .book .btn { margin-top: 0.75rem; }
+
+  /* About */
+  .links { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; }
+  .links a { text-underline-offset: 4px; }
+  .links a:hover, .links a:focus-visible { color: var(--gold); }
+
+  footer { padding: 2.5rem 0; border-top: 1px solid rgba(212,175,90,0.15); font-size: 0.9rem; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#">A.D. Escu</a>
+    <nav aria-label="Navigare">
+      <a href="#seria">Seria Dex Varney</a>
+      <a href="#romana">În română</a>
+      <a href="#autor">Despre autor</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="stack">
+        <p class="overline">A.D. Escu · Seria Dex Varney</p>
+        <h1 id="hero-title">Noir cu umor negru pe Coasta Golfului</h1>
+        <p class="tagline muted">Cinci mii de dolari ca să cânte la o înmormântare. Numai că mortul n-a fost încă livrat.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#seria">Cărțile în engleză pe Amazon</a>
+          <a class="btn btn-outline" href="#romana">Edițiile în română</a>
+        </div>
+      </div>
+      <img class="hero-cover" src="img/play-me-out-thursday.jpg" width="800" height="1280"
+           alt="Coperta romanului Play Me Out Thursday de A.D. Escu" fetchpriority="high">
+    </div>
+  </section>
+
+  <!-- English editions -->
+  <section id="seria" class="alt" aria-labelledby="seria-title">
+    <div class="wrap">
+      <div class="intro stack">
+        <p class="overline">În engleză, pe Amazon</p>
+        <h2 id="seria-title">Seria Dex Varney</h2>
+        <p class="muted">Un trompetist lefter cu buza crăpată, o trompetă Martin din 1962 pe nume Mildred și obiceiul de a accepta cântările pe care nimeni din Port Mercy nu le vrea.</p>
+      </div>
+      <div class="books">
+        <article class="book">
+          <img src="img/play-me-out-thursday.jpg" width="180" height="288" loading="lazy" alt="Coperta Play Me Out Thursday">
+          <div class="stack">
+            <p class="overline">Volumul 1</p>
+            <h3>Play Me Out Thursday</h3>
+            <p class="muted">O femeie în rochie smarald îl plătește pe Dex să cânte joia viitoare la propria ei înmormântare. Apoi e găsită moartă în piscina goală a hotelului.</p>
+            <p class="formats gold italic">Kindle · Paperback · inclus în Kindle+</p>
+            <a class="btn btn-primary" href="https://www.amazon.com/dp/B0HRJK31DX" target="_blank" rel="noopener">Cumpără pe Amazon</a>
+          </div>
+        </article>
+        <article class="book">
+          <img src="img/whistle-me-down-saturday.jpg" width="180" height="288" loading="lazy" alt="Coperta Whistle Me Down Saturday">
+          <div class="stack">
+            <p class="overline">Volumul 2</p>
+            <h3>Whistle Me Down Saturday</h3>
+            <p class="muted">Un papagal cenușiu african repetă o propoziție pe care n-ar fi trebuit s-o învețe niciodată. Buldozerele vin sâmbătă la opt.</p>
+            <p class="formats gold italic">Kindle · Precomandă, apare pe 4 decembrie 2026</p>
+            <a class="btn btn-primary" href="https://www.amazon.com/dp/B0HS8H9RHT" target="_blank" rel="noopener">Precomandă pe Amazon</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Romanian editions -->
+  <section id="romana" aria-labelledby="romana-title">
+    <div class="wrap">
+      <div class="intro stack">
+        <p class="overline">Pe Google Play Cărți</p>
+        <h2 id="romana-title">Edițiile în română</h2>
+        <p class="muted">Ambele volume, traduse în română, apar ca ebook pe Google Play Cărți.</p>
+      </div>
+      <div class="books">
+        <article class="book">
+          <img src="img/joi-canta-mi-finalul.jpg" width="180" height="288" loading="lazy" alt="Coperta Joi, cântă-mi finalul">
+          <div class="stack">
+            <p class="overline">Volumul 1</p>
+            <h3>Joi, cântă-mi finalul</h3>
+            <p class="muted">O femeie în rochie smarald îl plătește pe Dex să cânte joia viitoare la propria ei înmormântare. Apoi e găsită moartă în piscina goală a hotelului.</p>
+            <!-- Când cartea e pe Google Play: înlocuiește <span> cu <a class="btn btn-primary" href="LINK" target="_blank" rel="noopener">Cumpără pe Google Play</a> -->
+            <span class="btn btn-soon" aria-disabled="true">În curând pe Google Play</span>
+          </div>
+        </article>
+        <article class="book">
+          <img src="img/fluiera-mi-sambata.jpg" width="180" height="288" loading="lazy" alt="Coperta Fluieră-mi sâmbătă">
+          <div class="stack">
+            <p class="overline">Volumul 2</p>
+            <h3>Fluieră-mi sâmbătă</h3>
+            <p class="muted">Un papagal cenușiu african repetă o propoziție pe care n-ar fi trebuit s-o învețe niciodată. Buldozerele vin sâmbătă la opt.</p>
+            <span class="btn btn-soon" aria-disabled="true">În curând pe Google Play</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="autor" class="alt" aria-labelledby="autor-title">
+    <div class="wrap">
+      <div class="intro stack">
+        <p class="overline">Despre autor</p>
+        <h2 id="autor-title">A.D. Escu</h2>
+        <p style="font-size:1.15rem">A.D. Escu scrie romane polițiste întunecate și amuzante despre oameni care ar prefera să se uite în altă parte și despre singura săptămână în care nu mai pot. Crescut cu discuri de jazz și romane noir de buzunar, e autorul seriei Dex Varney: „Joi, cântă-mi finalul” și „Fluieră-mi sâmbătă”.</p>
+        <div class="links">
+          <a href="https://www.amazon.com/stores/author/B0HRKKF6C5" target="_blank" rel="noopener">Pagina de autor Amazon</a>
+          <a href="https://www.goodreads.com/author/show/73748365.A_D_Escu" target="_blank" rel="noopener">Goodreads</a>
+          <a href="https://www.facebook.com/profile.php?id=61596271032290" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.tiktok.com/@pugilistul" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap muted">© 2026 A.D. Escu</div>
+</footer>
+
+</body>
+</html>
